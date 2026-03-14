@@ -1,0 +1,498 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>Australian BAKERY &amp; Cafe | Luxury Artisan Experience</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@100;300;400;500;700;900&family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,900;1,400;1,600;1,700;1,900&display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+    <style type="text/tailwindcss">
+        :root {
+            --gold-light: #F9E29C;
+            --gold-primary: #D4AF37;
+            --gold-dark: #A67C00;
+            --bg-darker: #050505;
+            --bg-surface: #0a0a0a;
+            --bg-card: #111111;
+        }
+        body {
+            background-color: var(--bg-darker);
+            color: #E2E8F0;
+        }
+        .gold-gradient {
+            background: linear-gradient(135deg, var(--gold-light) 0%, var(--gold-primary) 50%, var(--gold-dark) 100%);
+        }
+        .gold-text-gradient {
+            background: linear-gradient(135deg, var(--gold-light) 0%, var(--gold-primary) 50%, var(--gold-dark) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        .luxury-shadow {
+            box-shadow: 0 10px 30px -10px rgba(212, 175, 55, 0.15);
+        }
+        .luxury-btn {
+            background: linear-gradient(135deg, var(--gold-light) 0%, var(--gold-primary) 50%, var(--gold-dark) 100%);
+            color: #000;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.2em;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            position: relative;
+            overflow: hidden;
+            z-index: 1;
+        }
+        .luxury-btn::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background: linear-gradient(135deg, #FFF6D9 0%, var(--gold-light) 50%, var(--gold-primary) 100%);
+            z-index: -1;
+            transition: opacity 0.4s ease;
+            opacity: 0;
+        }
+        .luxury-btn:hover::before {
+            opacity: 1;
+        }
+        .luxury-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 15px 30px -10px rgba(212, 175, 55, 0.4);
+        }
+        .luxury-btn-outline {
+            border: 1px solid var(--gold-primary);
+            color: var(--gold-light);
+            font-weight: 500;
+            text-transform: uppercase;
+            letter-spacing: 0.2em;
+            transition: all 0.4s ease;
+            background: transparent;
+        }
+        .luxury-btn-outline:hover {
+            background: rgba(212, 175, 55, 0.1);
+            border-color: var(--gold-light);
+            color: #fff;
+        }
+        .nav-link {
+            position: relative;
+            color: #CBD5E1;
+            transition: color 0.3s ease;
+        }
+        .nav-link:hover {
+            color: var(--gold-light);
+        }
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 1px;
+            bottom: -4px;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: var(--gold-primary);
+            transition: width 0.3s ease;
+        }
+        .nav-link:hover::after {
+            width: 100%;
+        }
+        .glass-panel {
+            background: rgba(10, 10, 10, 0.7);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            border: 1px solid rgba(212, 175, 55, 0.1);
+        }
+        .section-separator {
+            height: 1px;
+            width: 100%;
+            background: linear-gradient(90deg, transparent 0%, rgba(212, 175, 55, 0.3) 50%, transparent 100%);
+        }
+    </style>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#D4AF37",
+                        "accent-gold": "#F9E29C",
+                        "dark-gold": "#A67C00"
+                    },
+                    fontFamily: {
+                        "sans": ["Be Vietnam Pro", "sans-serif"],
+                        "serif": ["Playfair Display", "serif"]
+                    },
+                },
+            },
+        }
+    </script>
+</head>
+<body class="antialiased selection:bg-primary selection:text-black font-sans">
+
+    <!-- Header -->
+    <header class="fixed top-0 w-full z-50 glass-panel border-b-0 border-primary/20 transition-all duration-300">
+        <div class="max-w-[90rem] mx-auto px-6 md:px-12 py-4 flex items-center justify-between">
+            <!-- Logo area -->
+            <div class="flex items-center gap-3">
+                <span class="material-symbols-outlined text-primary text-3xl font-light">bakery_dining</span>
+                <div class="flex flex-col">
+                    <a href="index.html" class="text-xl md:text-2xl font-serif font-bold tracking-[0.15em] text-white uppercase leading-none">
+                        Australian
+                    </a>
+                    <div class="flex items-center gap-2 mt-1">
+                        <span class="text-[9px] uppercase tracking-[0.3em] font-medium text-slate-400">Bakery &amp; Cafe</span>
+                        <span class="text-[10px] text-primary font-serif italic tracking-wider">Est. 2013</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Navigation Desktop -->
+            <nav class="hidden lg:flex items-center gap-10">
+                <a class="nav-link text-xs font-medium uppercase tracking-[0.2em]" href="index.html">Home</a>
+                <a class="nav-link text-xs font-medium uppercase tracking-[0.2em]" href="#about">About</a>
+                <a class="nav-link text-xs font-medium uppercase tracking-[0.2em]" href="menu.html">Menu</a>
+                <a class="nav-link text-xs font-medium uppercase tracking-[0.2em]" href="booking.html">Custom Cakes</a>
+                <a class="nav-link text-xs font-medium uppercase tracking-[0.2em]" href="gallery.html">Gallery</a>
+                <a class="nav-link text-xs font-medium uppercase tracking-[0.2em]" href="reviews.html">Reviews</a>
+                <a class="nav-link text-xs font-medium uppercase tracking-[0.2em]" href="contact.html">Contact</a>
+            </nav>
+
+            <!-- Actions -->
+            <div class="flex items-center gap-6">
+                <a href="menu.html" class="hidden md:inline-flex luxury-btn px-8 py-3 rounded-full text-[10px] items-center gap-2">
+                    Order Now <span class="material-symbols-outlined text-[14px]">arrow_forward</span>
+                </a>
+                <button class="lg:hidden text-white hover:text-primary transition-colors">
+                    <span class="material-symbols-outlined text-3xl">menu</span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="relative min-h-[95vh] flex items-center justify-center pt-20 overflow-hidden">
+        <!-- Background Image injected by USER -->
+        <div class="absolute inset-0 z-0">
+            <!-- Using the largest media file provided by the user -->
+            <img src="assets/media__1773228124907.png" alt="Australian Bakery & Cafe Exterior" class="w-full h-full object-cover object-center scale-105" />
+            
+            <!-- Elegant Dark Overlays for text readability -->
+            <div class="absolute inset-0 bg-black/50 mix-blend-multiply"></div>
+            <!-- Radial gradient to focus the center -->
+            <div class="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(0,0,0,0.2)_0%,rgba(5,5,5,0.9)_100%)]"></div>
+            <div class="absolute inset-0 bg-gradient-to-t from-[#050505] via-transparent to-black/60"></div>
+        </div>
+
+        <div class="relative z-10 max-w-[90rem] mx-auto px-6 md:px-12 w-full text-center flex flex-col items-center">
+            
+            <p class="text-primary font-serif italic text-xl md:text-2xl mb-4 opacity-90 tracking-wide drop-shadow-lg">
+                Est. 2013 • Gurdaspur
+            </p>
+            
+            <h1 class="text-5xl md:text-7xl lg:text-8xl font-serif font-bold text-white uppercase tracking-wider leading-[1.1] mb-6 drop-shadow-2xl">
+                The Gold Standard <br/>
+                <span class="gold-text-gradient font-black tracking-[0.1em]">Of Baking</span>
+            </h1>
+            
+            <p class="max-w-3xl text-lg md:text-xl text-slate-200 font-light leading-relaxed mb-12 drop-shadow-md">
+                Exquisite Artisan Bakes &amp; Custom Cakes from Australian Bakery &amp; Cafe. Handcrafted daily in Punjab utilizing authentic techniques and the finest ingredients.
+            </p>
+            
+            <div class="flex flex-col sm:flex-row items-center gap-6">
+                <a href="menu.html" class="luxury-btn px-10 py-4 rounded-full text-xs w-full sm:w-auto text-center">
+                    Explore Our Menu
+                </a>
+                <a href="booking.html" class="luxury-btn-outline px-10 py-4 rounded-full text-xs w-full sm:w-auto text-center backdrop-blur-sm">
+                    Book a Custom Cake
+                </a>
+            </div>
+        </div>
+        
+        <!-- Scroll indicator -->
+        <div class="absolute bottom-10 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 animate-bounce opacity-70">
+            <span class="text-[9px] uppercase tracking-[0.3em] text-primary">Discover</span>
+            <span class="material-symbols-outlined text-primary">expand_more</span>
+        </div>
+    </section>
+
+    <div class="section-separator"></div>
+
+    <!-- About Section -->
+    <section id="about" class="py-24 md:py-32 relative bg-[#0a0a0a]">
+        <div class="max-w-[90rem] mx-auto px-6 md:px-12">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+                <!-- Text Content -->
+                <div class="relative">
+                    <span class="material-symbols-outlined text-primary/5 absolute -top-8 -left-4 text-[160px] pointer-events-none">bakery_dining</span>
+                    <p class="text-primary text-[11px] font-bold uppercase tracking-[0.4em] mb-4 relative z-10">Our Story</p>
+                    <h2 class="text-4xl md:text-5xl font-serif font-bold text-white mb-8 relative z-10">Australian Bakery & Cafe</h2>
+                    <div class="space-y-5 relative z-10">
+                        <p class="text-slate-300 font-light leading-relaxed text-lg">
+                            Nestled in the heart of Civil Lines, Gurdaspur, Australian Bakery & Cafe has been crafting memorable flavours since <span class="text-primary font-medium">2013</span>. What began as a passion for artisan baking has grown into the city's most beloved destination for exquisite cakes, Italian-inspired delicacies, and freshly brewed coffee.
+                        </p>
+                        <p class="text-slate-400 font-light leading-relaxed">
+                            Rated <span class="text-primary font-semibold">4.4 ★</span> by over 546 delighted patrons, we take pride in our creative cake designs, warm hospitality, and an inviting ambience that keeps guests coming back. From vegan-friendly treats to hearty sandwiches and quick bites — there's something for every palate.
+                        </p>
+                    </div>
+                    <div class="mt-10 flex flex-wrap items-center gap-6">
+                        <div class="flex items-center gap-3">
+                            <div class="w-12 h-12 rounded-full border border-primary/30 flex items-center justify-center bg-primary/5">
+                                <span class="material-symbols-outlined text-primary">schedule</span>
+                            </div>
+                            <div>
+                                <p class="text-white text-sm font-medium">Open Daily</p>
+                                <p class="text-slate-400 text-xs">10 AM – 10 PM</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center gap-3">
+                            <div class="w-12 h-12 rounded-full border border-primary/30 flex items-center justify-center bg-primary/5">
+                                <span class="material-symbols-outlined text-primary">star</span>
+                            </div>
+                            <div>
+                                <p class="text-white text-sm font-medium">4.4 ★ Rating</p>
+                                <p class="text-slate-400 text-xs">546+ Reviews</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center gap-3">
+                            <div class="w-12 h-12 rounded-full border border-primary/30 flex items-center justify-center bg-primary/5">
+                                <span class="material-symbols-outlined text-primary">eco</span>
+                            </div>
+                            <div>
+                                <p class="text-white text-sm font-medium">Vegan Options</p>
+                                <p class="text-slate-400 text-xs">Available</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Image / Visual -->
+                <div class="relative">
+                    <div class="rounded-3xl overflow-hidden border border-primary/20 shadow-2xl">
+                        <img src="assets/media__1773228124907.png" alt="Australian Bakery & Cafe Interior" class="w-full h-[500px] object-cover"/>
+                    </div>
+                    <div class="absolute -bottom-6 -left-6 bg-[#111] border border-primary/30 rounded-2xl p-6 shadow-xl hidden md:block">
+                        <p class="text-primary font-serif italic text-lg">"The Gold Standard of Baking"</p>
+                        <p class="text-slate-400 text-xs mt-1">Since 2013 • Gurdaspur, Punjab</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="section-separator"></div>
+
+    <!-- Featured Categories Section -->
+    <section class="py-24 md:py-32 relative bg-[url('assets/media__1773227695619.png')] bg-cover bg-fixed bg-center">
+        <div class="absolute inset-0 bg-[#050505]/95 backdrop-blur-sm"></div>
+        
+        <div class="relative z-10 max-w-[90rem] mx-auto px-6 md:px-12">
+            <div class="text-center mb-20">
+                <p class="text-primary text-[11px] font-bold uppercase tracking-[0.4em] mb-3">Our Offerings</p>
+                <h2 class="text-4xl md:text-5xl font-serif font-bold text-white capitalize">Exquisite Creations</h2>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Category 1 -->
+                <a href="menu.html" class="group relative h-96 rounded-2xl overflow-hidden block">
+                    <img src="assets/artisan_cakes.png" alt="Cakes" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"/>
+                    <div class="absolute inset-0 bg-gradient-to-t from-[#050505] via-[#050505]/40 to-transparent opacity-90 border border-white/10 rounded-2xl group-hover:border-primary/50 transition-all duration-500"></div>
+                    <div class="absolute bottom-0 left-0 w-full p-8 translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
+                        <h3 class="text-2xl font-serif text-white mb-2">Artisan Cakes</h3>
+                        <p class="text-primary text-sm tracking-wider opacity-0 group-hover:opacity-100 transition-opacity duration-500 delay-100">View Collection &#8594;</p>
+                    </div>
+                </a>
+                <!-- Category 2 -->
+                <a href="menu.html" class="group relative h-96 rounded-2xl overflow-hidden block">
+                    <img src="assets/fine_pastries.png" alt="Pastries" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"/>
+                    <div class="absolute inset-0 bg-gradient-to-t from-[#050505] via-[#050505]/40 to-transparent opacity-90 border border-white/10 rounded-2xl group-hover:border-primary/50 transition-all duration-500"></div>
+                    <div class="absolute bottom-0 left-0 w-full p-8 translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
+                        <h3 class="text-2xl font-serif text-white mb-2">Fine Pastries</h3>
+                        <p class="text-primary text-sm tracking-wider opacity-0 group-hover:opacity-100 transition-opacity duration-500 delay-100">Explore &#8594;</p>
+                    </div>
+                </a>
+                <!-- Category 3 -->
+                <a href="menu.html" class="group relative h-96 rounded-2xl overflow-hidden block">
+                    <img src="assets/cookies_macarons.png" alt="Cookies" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"/>
+                    <div class="absolute inset-0 bg-gradient-to-t from-[#050505] via-[#050505]/40 to-transparent opacity-90 border border-white/10 rounded-2xl group-hover:border-primary/50 transition-all duration-500"></div>
+                    <div class="absolute bottom-0 left-0 w-full p-8 translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
+                        <h3 class="text-2xl font-serif text-white mb-2">Cookies &amp; Macarons</h3>
+                        <p class="text-primary text-sm tracking-wider opacity-0 group-hover:opacity-100 transition-opacity duration-500 delay-100">Taste &#8594;</p>
+                    </div>
+                </a>
+                <!-- Category 4 -->
+                <a href="menu.html" class="group relative h-96 rounded-2xl overflow-hidden block">
+                    <img src="assets/patties_savories.png" alt="Savory Foods" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"/>
+                    <div class="absolute inset-0 bg-gradient-to-t from-[#050505] via-[#050505]/40 to-transparent opacity-90 border border-white/10 rounded-2xl group-hover:border-primary/50 transition-all duration-500"></div>
+                    <div class="absolute bottom-0 left-0 w-full p-8 translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
+                        <h3 class="text-2xl font-serif text-white mb-2">Patties &amp; Savories</h3>
+                        <p class="text-primary text-sm tracking-wider opacity-0 group-hover:opacity-100 transition-opacity duration-500 delay-100">Savor &#8594;</p>
+                    </div>
+                </a>
+            </div>
+            
+            <div class="mt-16 text-center">
+                <a href="menu.html" class="inline-flex items-center gap-2 text-white hover:text-primary border-b border-primary/50 pb-1 font-medium tracking-widest text-sm transition-colors uppercase">
+                    View Full Menu <span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Map & Info Section -->
+    <section class="py-24 bg-[#0a0a0a]">
+        <div class="max-w-[90rem] mx-auto px-6 md:px-12">
+            <div class="rounded-3xl border border-primary/20 overflow-hidden shadow-2xl bg-[#111] flex flex-col lg:flex-row">
+                
+                <!-- Info Column -->
+                <div class="w-full lg:w-5/12 p-10 md:p-16 flex flex-col justify-center relative">
+                    <!-- Decorative subtle icon -->
+                    <span class="material-symbols-outlined text-primary/5 absolute top-10 right-10 text-[120px] pointer-events-none">bakery_dining</span>
+                    
+                    <h2 class="text-3xl md:text-4xl font-serif font-bold text-white mb-8">Visit The Bakery</h2>
+                    
+                    <div class="space-y-8 relative z-10">
+                        <div class="flex items-start gap-5">
+                            <div class="w-10 h-10 rounded-full border border-primary/30 flex items-center justify-center shrink-0 bg-primary/5">
+                                <span class="material-symbols-outlined text-primary">location_on</span>
+                            </div>
+                            <div>
+                                <h4 class="text-white font-medium uppercase tracking-widest text-xs mb-2">Location</h4>
+                                <p class="text-slate-400 font-light leading-relaxed">
+                                    Ground floor, Chowk, Pathankot Road,<br/>
+                                    opp. Milk Plant, near Australian Farm,<br/>
+                                    Civil Lines, Gurdaspur, Punjab 143521
+                                </p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start gap-5">
+                            <div class="w-10 h-10 rounded-full border border-primary/30 flex items-center justify-center shrink-0 bg-primary/5">
+                                <span class="material-symbols-outlined text-primary">schedule</span>
+                            </div>
+                            <div>
+                                <h4 class="text-white font-medium uppercase tracking-widest text-xs mb-2">Hours</h4>
+                                <p class="text-slate-400 font-light leading-relaxed">
+                                    Wednesday to Tuesday<br/>
+                                    9 AM – 10 PM
+                                </p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start gap-5">
+                            <div class="w-10 h-10 rounded-full border border-primary/30 flex items-center justify-center shrink-0 bg-primary/5">
+                                <span class="material-symbols-outlined text-primary">call</span>
+                            </div>
+                            <div>
+                                <h4 class="text-white font-medium uppercase tracking-widest text-xs mb-2">Contact</h4>
+                                <p class="text-slate-400 font-light leading-relaxed">
+                                    078376 77529
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="mt-12 flex items-center gap-4">
+                        <a href="contact.html" class="luxury-btn px-8 py-3 rounded-full text-[10px]">Get Directions</a>
+                        <a href="https://wa.me/9107837677529" target="_blank" class="luxury-btn-outline px-8 py-3 rounded-full text-[10px] flex items-center gap-2">
+                            WhatsApp
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Genuine Google Maps Iframe aligned accurately to Gurdaspur -->
+                <div class="w-full lg:w-7/12 min-h-[400px] lg:min-h-full relative bg-black">
+                     <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d13518.237255447167!2d75.3917822!3d32.0401736!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x391b53c7c223c3b1%3A0xe5a1b3c9b7b84803!2sCivil%20Lines%2C%20Gurdaspur%2C%20Punjab%20143521!5e0!3m2!1sen!2sin!4v1700000000000!5m2!1sen!2sin" 
+                        width="100%" 
+                        height="100%" 
+                        style="border:0; position:absolute; top:0; left:0; filter: invert(90%) hue-rotate(180deg) brightness(85%) contrast(120%) grayscale(60%); min-height:100%;" 
+                        allowfullscreen="" 
+                        loading="lazy" 
+                        referrerpolicy="no-referrer-when-downgrade">
+                    </iframe>
+                </div>
+                
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-black pt-20 pb-10 border-t border-primary/20 relative overflow-hidden">
+        <div class="max-w-[90rem] mx-auto px-6 md:px-12 relative z-10">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
+                <!-- Branding Col -->
+                <div class="lg:col-span-1">
+                    <a href="index.html" class="inline-flex flex-col mb-6">
+                        <div class="flex items-center gap-2 text-primary">
+                            <span class="material-symbols-outlined text-3xl">bakery_dining</span>
+                            <span class="text-xl font-serif font-bold tracking-[0.15em] text-white uppercase leading-none">Australian</span>
+                        </div>
+                        <span class="text-[9px] uppercase tracking-[0.3em] font-medium text-slate-400 mt-1">Bakery &amp; Cafe</span>
+                        <span class="text-primary font-serif italic mt-2 text-sm">Est. 2013</span>
+                    </a>
+                    <p class="text-slate-400 text-sm font-light leading-relaxed mb-6">
+                        Experience the gold standard of artisan baking in the heart of Gurdaspur. Quality handcrafted delicacies since 2013.
+                    </p>
+                    
+                    <!-- Exact Social Links provided -->
+                    <div class="flex items-center gap-4">
+                        <a href="https://www.instagram.com/australian_bakery_gsp/" target="_blank" rel="noopener noreferrer" class="w-10 h-10 rounded-full border border-primary/30 flex items-center justify-center text-primary hover:bg-primary hover:text-black transition-all">
+                            <!-- Instagram SVG -->
+                            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.981 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
+                        </a>
+                        <!-- Explicit Facebook Link -->
+                        <a href="https://www.facebook.com/bakehousegsp/" target="_blank" rel="noopener noreferrer" class="w-10 h-10 rounded-full border border-primary/30 flex items-center justify-center text-primary hover:bg-primary hover:text-black transition-all">
+                            <!-- Facebook SVG -->
+                            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M22 12c0-5.52-4.48-10-10-10S2 6.48 2 12c0 4.84 3.44 8.87 8 9.8V15H8v-3h2V9.5C10 7.57 11.57 6 13.5 6H16v3h-2c-.55 0-1 .45-1 1V12h3l-.5 3H13v6.8c4.56-.93 8-4.96 8-9.8z"/></svg>
+                        </a>
+                        <a href="https://wa.me/9107837677529" target="_blank" rel="noopener noreferrer" class="w-10 h-10 rounded-full border border-primary/30 flex items-center justify-center text-primary hover:bg-primary hover:text-black transition-all">
+                            <!-- WhatsApp SVG approx (using chat icon as fallback) -->
+                            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2 22l5.25-1.38c1.45.8 3.08 1.22 4.79 1.22 5.46 0 9.91-4.45 9.91-9.91C21.95 6.45 17.5 2 12.04 2zm5.46 14.3c-.23.64-1.32 1.23-1.82 1.32-.45.09-1.04.14-1.68-.05-.41-.14-1.09-.36-2.13-.82-2.5-1.09-4.09-3.64-4.23-3.82-.14-.18-1-1.36-1-2.59 0-1.23.64-1.82.86-2.09.23-.27.5-.32.68-.32.18 0 .36 0 .5.05.18 0 .41-.09.64.45.27.64.91 2.23.95 2.36.05.14.09.32 0 .5-.09.18-.14.27-.27.41-.14.14-.27.32-.36.41-.14.14-.27.27-.14.5.14.23.64 1.04 1.36 1.68.91.82 1.68 1.05 1.91 1.18.23.14.36.09.5-.05.14-.14.64-.73.82-.95.18-.23.41-.18.64-.09.23.09 1.45.68 1.68.82.23.14.36.18.41.32.09.23.04 1.05-.18 1.64z"/></svg>
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Links -->
+                <div>
+                    <h4 class="text-white font-medium uppercase tracking-[0.2em] text-xs mb-6">Explore</h4>
+                    <ul class="space-y-4 text-slate-400 font-light text-sm">
+                        <li><a href="#about" class="hover:text-primary transition-colors">About Us</a></li>
+                        <li><a href="menu.html" class="hover:text-primary transition-colors">Artisan Menu</a></li>
+                        <li><a href="booking.html" class="hover:text-primary transition-colors">Custom Cakes</a></li>
+                        <li><a href="gallery.html" class="hover:text-primary transition-colors">Gallery</a></li>
+                        <li><a href="reviews.html" class="hover:text-primary transition-colors">Testimonials</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Open Hours -->
+                <div>
+                    <h4 class="text-white font-medium uppercase tracking-[0.2em] text-xs mb-6">Service Hours</h4>
+                    <ul class="space-y-4 text-slate-400 font-light text-sm">
+                        <li class="flex justify-between border-b border-primary/10 pb-2">
+                            <span>Wednesday - Tuesday</span>
+                            <span class="text-white">9:00 AM - 10:00 PM</span>
+                        </li>
+                    </ul>
+                </div>
+                
+                <!-- Newsletter -->
+                <div>
+                    <h4 class="text-white font-medium uppercase tracking-[0.2em] text-xs mb-6">The Gold Club</h4>
+                    <p class="text-slate-400 text-sm font-light leading-relaxed mb-4">
+                        Subscribe for exclusive previews and seasonal offerings.
+                    </p>
+                    <form class="flex flex-col gap-3">
+                        <input type="email" placeholder="Email Address" class="bg-[#111] border border-primary/20 text-white px-4 py-3 rounded-md focus:outline-none focus:border-primary w-full text-sm">
+                        <button type="submit" class="luxury-btn w-full py-3 rounded-md text-[10px]">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+            
+            <div class="border-t border-primary/20 pt-8 flex flex-col md:flex-row items-center justify-between text-slate-500 text-[10px] uppercase tracking-widest gap-4">
+                <p>&copy; 2024 Australian Bakery &amp; Cafe. Est. 2013.</p>
+                <div class="flex gap-4">
+                    <a href="#" class="hover:text-primary transition-colors">Privacy Policy</a>
+                    <a href="#" class="hover:text-primary transition-colors">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>

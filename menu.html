@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>Australian BAKERY &amp; Cafe | Artisan Menu</title>
+    <script src="https://cdn.tailwindcss.com?plugins=container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@300;400;500;700&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+    <style type="text/tailwindcss">
+        :root { --gold-light: #F9E29C; --gold-primary: #D4AF37; --gold-dark: #A67C00; --bg-darker: #050505; }
+        body { background-color: var(--bg-darker); color: #E2E8F0; }
+        .glass-panel { background: rgba(10, 10, 10, 0.7); backdrop-filter: blur(16px); border: 1px solid rgba(212, 175, 55, 0.1); }
+        .menu-list-item { 
+            display: flex; justify-content: space-between; align-items: flex-end; 
+            border-bottom: 1px solid rgba(255,255,255,0.05); padding-bottom: 0.5rem;
+            transition: border-color 0.3s ease;
+        }
+        .menu-list-item:hover { border-color: rgba(212,175,55,0.4); }
+        .menu-list-item .name { font-family: 'Playfair Display', serif; font-size: 1.125rem; color: #cbd5e1; transition: color 0.3s ease; }
+        .menu-list-item:hover .name { color: white; }
+        .menu-list-item .price { color: #D4AF37; font-weight: 700; font-size: 1.125rem; }
+    </style>
+    <script>tailwind.config = { theme: { extend: { colors: { "primary": "#D4AF37" }, fontFamily: { "sans": ["Be Vietnam Pro"], "serif": ["Playfair Display"] } } } }</script>
+</head>
+<body class="antialiased selection:bg-primary selection:text-black font-sans flex flex-col min-h-screen">
+
+    <!-- Header -->
+    <header class="fixed top-0 w-full z-50 glass-panel border-b-0 border-primary/20">
+        <div class="max-w-[90rem] mx-auto px-6 md:px-12 py-4 flex items-center justify-between">
+            <div class="flex items-center gap-3">
+                <span class="material-symbols-outlined text-primary text-3xl font-light">bakery_dining</span>
+                <div class="flex flex-col">
+                    <a href="index.html" class="text-xl md:text-2xl font-serif font-bold tracking-[0.15em] text-white uppercase leading-none">Australian</a>
+                    <div class="flex items-center gap-2 mt-1">
+                        <span class="text-[9px] uppercase tracking-[0.3em] font-medium text-slate-400">Bakery &amp; Cafe</span>
+                        <span class="text-[10px] text-primary font-serif italic tracking-wider">Est. 2013</span>
+                    </div>
+                </div>
+            </div>
+            <nav class="hidden lg:flex items-center gap-10">
+                <a class="text-xs font-medium uppercase tracking-[0.2em] text-[#CBD5E1] hover:text-primary transition" href="index.html">Home</a>
+                <a class="text-xs font-medium uppercase tracking-[0.2em] text-[#CBD5E1] hover:text-primary transition" href="index.html#about">About</a>
+                <a class="text-xs font-medium uppercase tracking-[0.2em] text-primary" href="menu.html">Menu</a>
+                <a class="text-xs font-medium uppercase tracking-[0.2em] text-[#CBD5E1] hover:text-primary transition" href="booking.html">Custom Cakes</a>
+                <a class="text-xs font-medium uppercase tracking-[0.2em] text-[#CBD5E1] hover:text-primary transition" href="gallery.html">Gallery</a>
+                <a class="text-xs font-medium uppercase tracking-[0.2em] text-[#CBD5E1] hover:text-primary transition" href="reviews.html">Reviews</a>
+                <a class="text-xs font-medium uppercase tracking-[0.2em] text-[#CBD5E1] hover:text-primary transition" href="contact.html">Contact</a>
+            </nav>
+            <div class="hidden md:flex items-center gap-6">
+                <a href="https://www.facebook.com/bakehousegsp/" target="_blank" class="text-slate-400 hover:text-primary transition">
+                    <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M22 12c0-5.52-4.48-10-10-10S2 6.48 2 12c0 4.84 3.44 8.87 8 9.8V15H8v-3h2V9.5C10 7.57 11.57 6 13.5 6H16v3h-2c-.55 0-1 .45-1 1V12h3l-.5 3H13v6.8c4.56-.93 8-4.96 8-9.8z"/></svg>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Menu Content -->
+    <main class="flex-grow pt-40 pb-24">
+        <div class="max-w-[70rem] mx-auto px-6 md:px-12">
+            
+            <div class="text-center mb-20">
+                <p class="text-primary text-[11px] font-bold uppercase tracking-[0.4em] mb-4">Our Exquisite Offerings</p>
+                <h1 class="text-5xl md:text-6xl font-serif font-bold text-white tracking-wider mb-6">The Grand Menu</h1>
+                <p class="max-w-2xl mx-auto text-slate-400 font-light leading-relaxed mb-6">
+                    A curated selection of the finest bakes, prepared daily with uncompromising standards and artisanal precision.
+                </p>
+                
+                <div class="flex justify-center mt-10">
+                    <a href="https://www.swiggy.com/city/gurdaspur/australian-bakery-and-cafe-krishan-nagar-gurdaspur-locality-rest180873" target="_blank" class="px-8 py-3 rounded-full border border-primary text-primary hover:bg-primary hover:text-black font-bold text-xs uppercase tracking-widest transition-all inline-flex items-center gap-2">
+                        Order Online via Swiggy <span class="material-symbols-outlined text-[14px]">open_in_new</span>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Signature Cakes -->
+            <div class="mb-20">
+                <div class="flex items-center gap-6 mb-12">
+                    <h2 class="text-2xl md:text-3xl font-serif text-white uppercase tracking-widest whitespace-nowrap">Signature Cakes</h2>
+                    <div class="flex-grow h-[1px] bg-gradient-to-r from-primary/40 to-transparent"></div>
+                    <span class="text-[10px] uppercase text-primary tracking-widest hidden md:block">(500g unless specified)</span>
+                </div>
+                <!-- Spanning 2 columns for luxury list feel -->
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-x-16 gap-y-6">
+                    <div class="menu-list-item"><div class="name">Pineapple Gateaux Cake</div><div class="price">₹719</div></div>
+                    <div class="menu-list-item"><div class="name flex gap-3 items-center">Mixed Fruit Gateaux Cake <span class="bg-primary text-black text-[9px] px-2 py-0.5 rounded-full font-bold uppercase tracking-wider">Bestseller</span></div><div class="price">₹719</div></div>
+                    <div class="menu-list-item"><div class="name">Belgium Coffee Cake</div><div class="price">₹719</div></div>
+                    <div class="menu-list-item"><div class="name">Mango Cake</div><div class="price">₹599</div></div>
+                    <div class="menu-list-item"><div class="name">Chocolate Butterscotch Cake</div><div class="price">₹719</div></div>
+                    <div class="menu-list-item"><div class="name">Chocolate Chips Cake</div><div class="price">₹599</div></div>
+                    <div class="menu-list-item"><div class="name">Hazelnut Chocolate Cake</div><div class="price">₹719</div></div>
+                    <div class="menu-list-item"><div class="name">Fruity Velvet Cake</div><div class="price">₹719</div></div>
+                    <div class="menu-list-item"><div class="name">Chocolate Brownie Dry Cake <span class="text-xs text-slate-500 font-sans tracking-normal ml-2">(250g)</span></div><div class="price">₹199</div></div>
+                    <div class="menu-list-item"><div class="name">Dates And Walnut Dry Cake <span class="text-xs text-slate-500 font-sans tracking-normal ml-2">(250g)</span></div><div class="price">₹199</div></div>
+                    <div class="menu-list-item"><div class="name">Best Dad Cake PINEAPPLE</div><div class="price">₹700</div></div>
+                    <div class="menu-list-item"><div class="name">Father Day Cakes MIX F</div><div class="price">₹800</div></div>
+                </div>
+            </div>
+
+            <!-- Fine Pastries -->
+            <div class="mb-20">
+                <div class="flex items-center gap-6 mb-12">
+                    <h2 class="text-2xl md:text-3xl font-serif text-white uppercase tracking-widest whitespace-nowrap">Fine Pastries & Jars</h2>
+                    <div class="flex-grow h-[1px] bg-gradient-to-r from-primary/40 to-transparent"></div>
+                </div>
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-x-16 gap-y-6">
+                    <div class="menu-list-item"><div class="name">Chocolate Truffle Pastry</div><div class="price">₹169</div></div>
+                    <div class="menu-list-item"><div class="name">Red Velvet Pastry</div><div class="price">₹159</div></div>
+                    <div class="menu-list-item"><div class="name">Mixed Fruit Pastry</div><div class="price">₹169</div></div>
+                    <div class="menu-list-item"><div class="name">Chocolate Chips Pastry</div><div class="price">₹109</div></div>
+                    <div class="menu-list-item"><div class="name">Butterscotch Pastry</div><div class="price">₹109</div></div>
+                    <div class="menu-list-item"><div class="name">Eggless Pineapple Pastry</div><div class="price">₹59</div></div>
+                    <div class="menu-list-item"><div class="name">Chocolate Cream Mousse Jar</div><div class="price">₹209</div></div>
+                    <div class="menu-list-item"><div class="name">Fruit Cream Jar</div><div class="price">₹209</div></div>
+                </div>
+            </div>
+
+            <!-- Savory Pizzas -->
+            <div class="mb-20">
+                <div class="flex items-center gap-6 mb-12">
+                    <h2 class="text-2xl md:text-3xl font-serif text-white uppercase tracking-widest whitespace-nowrap">Savory Pizzas</h2>
+                    <div class="flex-grow h-[1px] bg-gradient-to-r from-primary/40 to-transparent"></div>
+                </div>
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-x-16 gap-y-6">
+                    <div class="menu-list-item"><div class="name flex gap-3 items-center">Farm House Pizza <span class="bg-primary text-black text-[9px] px-2 py-0.5 rounded-full font-bold uppercase tracking-wider">Bestseller</span></div><div class="price">₹399</div></div>
+                    <div class="menu-list-item"><div class="name">Tandoori Paneer Pizza</div><div class="price">₹399</div></div>
+                    <div class="menu-list-item"><div class="name">Chef Special Pizza</div><div class="price">₹449</div></div>
+                    <div class="menu-list-item"><div class="name">Tandoori Sweet Corn Pizza</div><div class="price">₹349</div></div>
+                    <div class="menu-list-item"><div class="name">Margarita Pizza</div><div class="price">₹179</div></div>
+                </div>
+            </div>
+
+            <!-- Pastas & Cafe Classics -->
+            <div class="mb-10">
+                <div class="flex items-center gap-6 mb-12">
+                    <h2 class="text-2xl md:text-3xl font-serif text-white uppercase tracking-widest whitespace-nowrap">Handcrafted Pastas & Cafe Classics</h2>
+                    <div class="flex-grow h-[1px] bg-gradient-to-r from-primary/40 to-transparent"></div>
+                </div>
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-x-16 gap-y-6">
+                    <div class="menu-list-item"><div class="name">Red Sauce Pasta</div><div class="price">₹329</div></div>
+                    <div class="menu-list-item"><div class="name">White Sauce Pasta</div><div class="price">₹329</div></div>
+                    <div class="menu-list-item"><div class="name flex gap-3 items-center">Veg Grilled Sandwich <span class="bg-primary text-black text-[9px] px-2 py-0.5 rounded-full font-bold uppercase tracking-wider">Bestseller</span></div><div class="price">₹179</div></div>
+                    <div class="menu-list-item"><div class="name">Grilled Burger</div><div class="price">₹149</div></div>
+                    <div class="menu-list-item"><div class="name">Aloo Tikki Burger</div><div class="price">₹99</div></div>
+                    <div class="menu-list-item"><div class="name">Cold Coffee</div><div class="price">₹129</div></div>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-black pt-16 pb-8 border-t border-primary/20 mt-auto">
+        <div class="max-w-[90rem] mx-auto px-6 md:px-12 text-center text-slate-500 text-[10px] uppercase tracking-widest">
+            <p>&copy; 2024 Australian Bakery &amp; Cafe. Est. 2013. Luxury Artisan Dining.</p>
+        </div>
+    </footer>
+
+</body>
+</html>

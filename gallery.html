@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>Australian BAKERY &amp; Cafe | Gallery</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@300;400;500;700&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+    <style type="text/tailwindcss">
+        :root { --gold-light: #F9E29C; --gold-primary: #D4AF37; --gold-dark: #A67C00; --bg-darker: #050505; }
+        body { background-color: var(--bg-darker); color: #E2E8F0; }
+        .glass-panel { background: rgba(10, 10, 10, 0.7); backdrop-filter: blur(16px); border: 1px solid rgba(212, 175, 55, 0.1); }
+    </style>
+    <script>tailwind.config = { theme: { extend: { colors: { "primary": "#D4AF37" }, fontFamily: { "sans": ["Be Vietnam Pro"], "serif": ["Playfair Display"] } } } }</script>
+</head>
+<body class="antialiased selection:bg-primary selection:text-black font-sans flex flex-col min-h-screen">
+    <header class="fixed top-0 w-full z-50 glass-panel border-b-0 border-primary/20">
+        <div class="max-w-[90rem] mx-auto px-6 md:px-12 py-4 flex items-center justify-between">
+            <div class="flex items-center gap-3">
+                <span class="material-symbols-outlined text-primary text-3xl font-light">bakery_dining</span>
+                <div class="flex flex-col">
+                    <a href="index.html" class="text-xl font-serif font-bold tracking-[0.15em] text-white uppercase leading-none">Australian</a>
+                    <div class="flex items-center gap-2 mt-1">
+                        <span class="text-[9px] uppercase tracking-[0.3em] font-medium text-slate-400">Bakery &amp; Cafe</span>
+                        <span class="text-[10px] text-primary font-serif italic tracking-wider">Est. 2013</span>
+                    </div>
+                </div>
+            </div>
+            <nav class="hidden lg:flex items-center gap-10">
+                <a class="text-xs font-medium uppercase tracking-[0.2em] text-[#CBD5E1] hover:text-primary transition" href="index.html">Home</a>
+                <a class="text-xs font-medium uppercase tracking-[0.2em] text-[#CBD5E1] hover:text-primary transition" href="index.html#about">About</a>
+                <a class="text-xs font-medium uppercase tracking-[0.2em] text-[#CBD5E1] hover:text-primary transition" href="menu.html">Menu</a>
+                <a class="text-xs font-medium uppercase tracking-[0.2em] text-[#CBD5E1] hover:text-primary transition" href="booking.html">Custom Cakes</a>
+                <a class="text-xs font-medium uppercase tracking-[0.2em] text-primary" href="gallery.html">Gallery</a>
+                <a class="text-xs font-medium uppercase tracking-[0.2em] text-[#CBD5E1] hover:text-primary transition" href="reviews.html">Reviews</a>
+                <a class="text-xs font-medium uppercase tracking-[0.2em] text-[#CBD5E1] hover:text-primary transition" href="contact.html">Contact</a>
+            </nav>
+            <div class="hidden md:flex items-center gap-6">
+                <!-- Social Icons in Header for Luxury Feel -->
+                <a href="https://www.facebook.com/bakehousegsp/" target="_blank" class="text-slate-400 hover:text-primary transition">
+                    <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M22 12c0-5.52-4.48-10-10-10S2 6.48 2 12c0 4.84 3.44 8.87 8 9.8V15H8v-3h2V9.5C10 7.57 11.57 6 13.5 6H16v3h-2c-.55 0-1 .45-1 1V12h3l-.5 3H13v6.8c4.56-.93 8-4.96 8-9.8z"/></svg>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <main class="flex-grow pt-40 pb-24">
+        <div class="max-w-[90rem] mx-auto px-6 md:px-12 text-center">
+            
+            <p class="text-primary text-[11px] font-bold uppercase tracking-[0.4em] mb-4">A Visual Journey</p>
+            <h1 class="text-5xl md:text-6xl font-serif font-bold text-white tracking-wider mb-6">Our Gallery</h1>
+            <p class="max-w-2xl mx-auto text-slate-400 font-light leading-relaxed mb-16">
+                Explore the intricate craftsmanship and ambient beauty of Australian Bakery & Cafe.
+            </p>
+
+            <!-- Masonry Grid -->
+            <div class="columns-1 md:columns-2 lg:columns-3 gap-6 space-y-6">
+                
+                <div class="break-inside-avoid rounded-xl overflow-hidden shadow-2xl border border-primary/20 hover:border-primary/50 transition-all group relative">
+                    <img src="assets/media__1773230834792.png" class="w-full h-auto object-cover group-hover:scale-105 transition-transform duration-700" alt="Beautiful pink blossom cafe interior">
+                    <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none"></div>
+                </div>
+
+                <div class="break-inside-avoid rounded-xl overflow-hidden shadow-2xl border border-primary/20 hover:border-primary/50 transition-all group relative">
+                    <img src="assets/media__1773230757566.png" class="w-full h-auto object-cover group-hover:scale-105 transition-transform duration-700" alt="Exquisite round cakes on display shelf">
+                    <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none"></div>
+                </div>
+
+                <div class="break-inside-avoid rounded-xl overflow-hidden shadow-2xl border border-primary/20 hover:border-primary/50 transition-all group relative">
+                    <img src="assets/media__1773228124907.png" class="w-full h-auto object-cover group-hover:scale-105 transition-transform duration-700" alt="Store shelves with luxury artisanal products">
+                    <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none"></div>
+                </div>
+
+                <div class="break-inside-avoid rounded-xl overflow-hidden shadow-2xl border border-primary/20 hover:border-primary/50 transition-all group relative">
+                    <img src="assets/media__1773227805084.png" class="w-full h-auto object-cover group-hover:scale-105 transition-transform duration-700" alt="Artful heart-shaped cappuccino art">
+                    <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none"></div>
+                </div>
+
+                <div class="break-inside-avoid rounded-xl overflow-hidden shadow-2xl border border-primary/20 hover:border-primary/50 transition-all group relative">
+                    <img src="assets/media__1773227743324.png" class="w-full h-auto object-cover group-hover:scale-105 transition-transform duration-700" alt="Premium decorative cake">
+                    <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none"></div>
+                </div>
+
+                <div class="break-inside-avoid rounded-xl overflow-hidden shadow-2xl border border-primary/20 hover:border-primary/50 transition-all group relative">
+                    <img src="assets/media__1773227552352.png" class="w-full h-auto object-cover group-hover:scale-105 transition-transform duration-700" alt="Selection of tiered luxury cakes">
+                    <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none"></div>
+                </div>
+
+                <div class="break-inside-avoid rounded-xl overflow-hidden shadow-2xl border border-primary/20 hover:border-primary/50 transition-all group relative">
+                    <img src="assets/media__1773227695619.png" class="w-full h-auto object-cover group-hover:scale-105 transition-transform duration-700" alt="Bakery display items">
+                    <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none"></div>
+                </div>
+
+                <div class="break-inside-avoid rounded-xl overflow-hidden shadow-2xl border border-primary/20 hover:border-primary/50 transition-all group relative">
+                    <img src="assets/media__1773227759792.png" class="w-full h-auto object-cover group-hover:scale-105 transition-transform duration-700" alt="Luxury chocolate pastry close-up">
+                    <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none"></div>
+                </div>
+
+            </div>
+        </div>
+    </main>
+
+    <footer class="bg-black pt-16 pb-8 border-t border-primary/20 mt-auto">
+        <div class="max-w-[90rem] mx-auto px-6 text-center text-slate-500 text-[10px] uppercase tracking-widest">
+            <p>&copy; 2024 Australian Bakery &amp; Cafe. Est. 2013.</p>
+            <div class="flex justify-center gap-6 mt-4">
+                <a href="https://www.facebook.com/bakehousegsp/" class="hover:text-primary transition">Facebook</a>
+                <a href="https://www.instagram.com/australian_bakery_gsp/" class="hover:text-primary transition">Instagram</a>
+                <a href="https://wa.me/9107837677529" class="hover:text-primary transition">WhatsApp</a>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

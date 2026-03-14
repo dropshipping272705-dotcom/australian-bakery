@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>Australian BAKERY &amp; Cafe | Custom Cakes</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@300;400;500;700&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+    <style type="text/tailwindcss">
+        :root { --gold-light: #F9E29C; --gold-primary: #D4AF37; --gold-dark: #A67C00; --bg-darker: #050505; }
+        body { background-color: var(--bg-darker); color: #E2E8F0; }
+        .luxury-btn { background: linear-gradient(135deg, var(--gold-light) 0%, var(--gold-primary) 50%, var(--gold-dark) 100%); color: #000; font-weight: 700; text-transform: uppercase; letter-spacing: 0.2em; transition: all 0.4s ease; }
+        .luxury-btn:hover { transform: translateY(-2px); box-shadow: 0 15px 30px -10px rgba(212, 175, 55, 0.4); }
+        .glass-panel { background: rgba(10, 10, 10, 0.7); backdrop-filter: blur(16px); border: 1px solid rgba(212, 175, 55, 0.1); }
+        .luxury-input { background: #111; border: 1px solid rgba(212,175,55,0.2); color: white; border-radius: 0.5rem; transition: all 0.3s ease; }
+        .luxury-input:focus { border-color: var(--gold-primary); outline: none; box-shadow: 0 0 10px rgba(212,175,55,0.1); }
+    </style>
+    <script>tailwind.config = { theme: { extend: { colors: { "primary": "#D4AF37" }, fontFamily: { "sans": ["Be Vietnam Pro"], "serif": ["Playfair Display"] } } } }</script>
+</head>
+<body class="antialiased selection:bg-primary selection:text-black font-sans flex flex-col min-h-screen">
+    <!-- Header -->
+    <header class="fixed top-0 w-full z-50 glass-panel border-b-0 border-primary/20">
+        <div class="max-w-[90rem] mx-auto px-6 md:px-12 py-4 flex items-center justify-between">
+            <div class="flex items-center gap-3">
+                <span class="material-symbols-outlined text-primary text-3xl font-light">bakery_dining</span>
+                <div class="flex flex-col">
+                    <a href="index.html" class="text-xl md:text-2xl font-serif font-bold tracking-[0.15em] text-white uppercase leading-none">Australian</a>
+                    <div class="flex items-center gap-2 mt-1">
+                        <span class="text-[9px] uppercase tracking-[0.3em] font-medium text-slate-400">Bakery &amp; Cafe</span>
+                        <span class="text-[10px] text-primary font-serif italic tracking-wider">Est. 2013</span>
+                    </div>
+                </div>
+            </div>
+            <nav class="hidden lg:flex items-center gap-10">
+                <a class="text-xs font-medium uppercase tracking-[0.2em] text-[#CBD5E1] hover:text-primary transition" href="index.html">Home</a>
+                <a class="text-xs font-medium uppercase tracking-[0.2em] text-[#CBD5E1] hover:text-primary transition" href="index.html#about">About</a>
+                <a class="text-xs font-medium uppercase tracking-[0.2em] text-[#CBD5E1] hover:text-primary transition" href="menu.html">Menu</a>
+                <a class="text-xs font-medium uppercase tracking-[0.2em] text-primary" href="booking.html">Custom Cakes</a>
+                <a class="text-xs font-medium uppercase tracking-[0.2em] text-[#CBD5E1] hover:text-primary transition" href="gallery.html">Gallery</a>
+                <a class="text-xs font-medium uppercase tracking-[0.2em] text-[#CBD5E1] hover:text-primary transition" href="reviews.html">Reviews</a>
+                <a class="text-xs font-medium uppercase tracking-[0.2em] text-[#CBD5E1] hover:text-primary transition" href="contact.html">Contact</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="flex-grow pt-40 pb-24">
+        <div class="max-w-4xl mx-auto px-6">
+            <div class="text-center mb-16">
+                <h1 class="text-5xl font-serif font-bold text-white tracking-wider mb-4">Book a Custom Cake</h1>
+                <p class="text-slate-400 font-light">Let us handcraft a masterpiece for your special occasion.</p>
+            </div>
+            <div class="bg-[#0a0a0a] p-10 rounded-2xl border border-primary/20 shadow-2xl">
+                <form class="space-y-6">
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div>
+                            <label class="block text-[10px] uppercase tracking-widest text-slate-400 mb-2">Full Name</label>
+                            <input type="text" class="w-full luxury-input px-5 py-4 text-sm" required>
+                        </div>
+                        <div>
+                            <label class="block text-[10px] uppercase tracking-widest text-slate-400 mb-2">Phone</label>
+                            <input type="text" class="w-full luxury-input px-5 py-4 text-sm" required>
+                        </div>
+                    </div>
+                    <div>
+                        <label class="block text-[10px] uppercase tracking-widest text-slate-400 mb-2">Cake Details &amp; Theme</label>
+                        <textarea rows="4" class="w-full luxury-input px-5 py-4 text-sm resize-none" required></textarea>
+                    </div>
+                    <button type="submit" class="luxury-btn w-full py-4 rounded-xl">Request Quote</button>
+                </form>
+            </div>
+        </div>
+    </main>
+
+    <footer class="bg-black pt-16 pb-8 border-t border-primary/20 mt-auto">
+        <div class="max-w-[90rem] mx-auto px-6 text-center text-slate-500 text-[10px] uppercase tracking-widest">
+            <p>&copy; 2024 Australian Bakery &amp; Cafe. Est. 2013.</p>
+            <div class="flex justify-center gap-6 mt-4">
+                <a href="https://www.facebook.com/bakehousegsp/" class="hover:text-primary transition">Facebook</a>
+                <a href="https://www.instagram.com/australian_bakery_gsp/" class="hover:text-primary transition">Instagram</a>
+                <a href="https://wa.me/9107837677529" class="hover:text-primary transition">WhatsApp</a>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

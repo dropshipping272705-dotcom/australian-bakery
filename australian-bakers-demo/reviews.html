@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>Australian BAKERY &amp; Cafe | Reviews</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@300;400;500;700&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+    <style type="text/tailwindcss">
+        :root { --gold-light: #F9E29C; --gold-primary: #D4AF37; --gold-dark: #A67C00; --bg-darker: #050505; }
+        body { background-color: var(--bg-darker); color: #E2E8F0; }
+        .glass-panel { background: rgba(10, 10, 10, 0.7); backdrop-filter: blur(16px); border: 1px solid rgba(212, 175, 55, 0.1); }
+        .review-card { background: #0a0a0a; border: 1px solid rgba(212,175,55,0.15); border-radius: 1rem; padding: 2rem; display: flex; flex-direction: column; height: 100%; transition: transform 0.3s ease, border-color 0.3s ease;}
+        .review-card:hover { transform: translateY(-5px); border-color: rgba(212,175,55,0.4); box-shadow: 0 10px 30px -10px rgba(0,0,0,0.8); }
+    </style>
+    <script>tailwind.config = { theme: { extend: { colors: { "primary": "#D4AF37" }, fontFamily: { "sans": ["Be Vietnam Pro"], "serif": ["Playfair Display"] } } } }</script>
+</head>
+<body class="antialiased selection:bg-primary selection:text-black font-sans flex flex-col min-h-screen">
+    <header class="fixed top-0 w-full z-50 glass-panel border-b-0 border-primary/20">
+        <div class="max-w-[90rem] mx-auto px-6 md:px-12 py-4 flex items-center justify-between">
+            <div class="flex items-center gap-3">
+                <span class="material-symbols-outlined text-primary text-3xl font-light">bakery_dining</span>
+                <div class="flex flex-col">
+                    <a href="index.html" class="text-xl font-serif font-bold tracking-[0.15em] text-white uppercase leading-none">Australian</a>
+                    <div class="flex items-center gap-2 mt-1">
+                        <span class="text-[9px] uppercase tracking-[0.3em] font-medium text-slate-400">Bakery &amp; Cafe</span>
+                        <span class="text-[10px] text-primary font-serif italic tracking-wider">Est. 2013</span>
+                    </div>
+                </div>
+            </div>
+            <nav class="hidden lg:flex items-center gap-10">
+                <a class="text-xs font-medium uppercase tracking-[0.2em] text-[#CBD5E1] hover:text-primary transition" href="index.html">Home</a>
+                <a class="text-xs font-medium uppercase tracking-[0.2em] text-[#CBD5E1] hover:text-primary transition" href="index.html#about">About</a>
+                <a class="text-xs font-medium uppercase tracking-[0.2em] text-[#CBD5E1] hover:text-primary transition" href="menu.html">Menu</a>
+                <a class="text-xs font-medium uppercase tracking-[0.2em] text-[#CBD5E1] hover:text-primary transition" href="booking.html">Custom Cakes</a>
+                <a class="text-xs font-medium uppercase tracking-[0.2em] text-[#CBD5E1] hover:text-primary transition" href="gallery.html">Gallery</a>
+                <a class="text-xs font-medium uppercase tracking-[0.2em] text-primary" href="reviews.html">Reviews</a>
+                <a class="text-xs font-medium uppercase tracking-[0.2em] text-[#CBD5E1] hover:text-primary transition" href="contact.html">Contact</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="flex-grow pt-40 pb-24">
+        <div class="max-w-[80rem] mx-auto px-6 text-center">
+            <p class="text-primary text-[11px] font-bold uppercase tracking-[0.4em] mb-4">Words of Appreciation</p>
+            <h1 class="text-5xl font-serif font-bold text-white tracking-wider mb-4">Client Testimonials</h1>
+            
+            <div class="flex justify-center items-center gap-4 mb-20">
+                <div class="flex text-primary text-2xl"><span class="material-symbols-outlined fill-1">star</span><span class="material-symbols-outlined fill-1">star</span><span class="material-symbols-outlined fill-1">star</span><span class="material-symbols-outlined fill-1">star</span><span class="material-symbols-outlined fill-1 text-primary/50">star_half</span></div>
+                <div class="text-white text-xl font-bold">4.5</div>
+                <div class="text-slate-400 text-sm">(528 reviews)</div>
+            </div>
+            
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 text-left">
+                
+                <!-- Review 1 -->
+                <div class="review-card">
+                    <div class="flex justify-between items-start mb-6">
+                        <div class="flex items-center gap-4">
+                            <div class="w-12 h-12 rounded-full bg-green-800 flex items-center justify-center text-white font-bold text-xl">T</div>
+                            <div>
+                                <h3 class="font-bold text-white">Tarandeep Kaur955</h3>
+                                <p class="text-xs text-slate-500">11 reviews &middot; 6 photos</p>
+                            </div>
+                        </div>
+                        <div class="flex text-primary text-sm"><span class="material-symbols-outlined fill-1">star</span><span class="material-symbols-outlined fill-1">star</span><span class="material-symbols-outlined fill-1">star</span><span class="material-symbols-outlined fill-1">star</span><span class="material-symbols-outlined fill-1">star</span></div>
+                    </div>
+                    <p class="text-slate-300 font-light mb-6 flex-grow leading-relaxed">
+                        "Amazing customer service by Australian Bakery Gurdaspur. Staff is super nice and helpful. I ordered cake from them and my family loved it cake was so beautiful by look and taste wise it was amazing. Definitely recommend Australian bakery."
+                    </p>
+                    <div class="text-xs text-slate-400 mb-6 bg-white/5 inline-block px-3 py-1 rounded-full w-fit">Food: 5/5 | Service: 5/5 | Atmosphere: 5/5</div>
+                    
+                    <div class="mt-auto h-48 rounded-xl overflow-hidden">
+                       <!-- We use object-cover to effectively "crop" the screenshot seamlessly to just the cake image area for aesthetics -->
+                       <img src="assets/media__1773232037341.png" class="w-full h-full object-cover object-bottom" alt="Customer Cake Photo" />
+                    </div>
+                </div>
+
+                <!-- Review 2 -->
+                <div class="review-card">
+                    <div class="flex justify-between items-start mb-6">
+                        <div class="flex items-center gap-4">
+                            <div class="w-12 h-12 rounded-full bg-slate-800 overflow-hidden">
+                                <!-- Placeholder avatar for surbhi using typical user avatar styling -->
+                                <img src="https://ui-avatars.com/api/?name=Surbhi+Piya&background=252528&color=D4AF37" alt="Surbhi Piya">
+                            </div>
+                            <div>
+                                <h3 class="font-bold text-white flex items-center gap-1">surbhi piya <span class="material-symbols-outlined text-[14px] text-orange-500 fill-1">stars</span></h3>
+                                <p class="text-xs text-slate-500">Local Guide &middot; 13 reviews &middot; 4 photos</p>
+                            </div>
+                        </div>
+                        <div class="flex text-primary text-sm"><span class="material-symbols-outlined fill-1">star</span><span class="material-symbols-outlined fill-1">star</span><span class="material-symbols-outlined fill-1">star</span><span class="material-symbols-outlined fill-1">star</span><span class="material-symbols-outlined fill-1">star</span></div>
+                    </div>
+                    <p class="text-slate-300 font-light mb-6 flex-grow leading-relaxed">
+                        "Ok... so I am in Canada and I wanted to order a cake for my family event. This Bakery was on top of every thing 🔥. Due to time difference, I wasn't able to reply on time but they still delivered it to my house. Unfortunately because of some confusion, They wrote happy birthday but to correct it, they went again to my house right away and make it perfect. I have no words for this. thankyou so much for making our celebration the best experience!!!!!! ❤️❤️❤️❤️❤️❤️❤️❤️❤️"
+                    </p>
+                    <div class="text-xs text-slate-400 mb-6 bg-white/5 inline-block px-3 py-1 rounded-full w-fit">Food: 5/5 | Service: 5/5 | Atmosphere: 5/5</div>
+                    <div class="text-xs">
+                        <p class="text-slate-400">Recommended dishes: <span class="text-white">Pineapple Cake</span></p>
+                        <p class="text-slate-400 mt-1">Recommendation for vegetarians: <span class="text-white">Highly recommend</span></p>
+                    </div>
+                </div>
+
+                <!-- Review 3 -->
+                <div class="review-card">
+                    <div class="flex justify-between items-start mb-6">
+                        <div class="flex items-center gap-4">
+                            <div class="w-12 h-12 rounded-full bg-slate-800 flex items-center justify-center font-bold text-xl text-white">D</div>
+                            <div>
+                                <h3 class="font-bold text-white">Dhruv Guleria</h3>
+                                <p class="text-xs text-slate-500">1 review &middot; 4 photos</p>
+                            </div>
+                        </div>
+                        <div class="flex text-primary text-sm"><span class="material-symbols-outlined fill-1">star</span><span class="material-symbols-outlined fill-1">star</span><span class="material-symbols-outlined fill-1">star</span><span class="material-symbols-outlined fill-1">star</span><span class="material-symbols-outlined fill-1">star</span></div>
+                    </div>
+                    <p class="text-slate-300 font-light mb-6 flex-grow leading-relaxed">
+                        "The cakes and pastries here are absolutely delicious, always fresh, and beautifully presented. The staff is friendly, helpful, and makes you feel genuinely welcome every time you visit."
+                    </p>
+                </div>
+
+                <!-- Review 4 -->
+                 <div class="review-card">
+                    <div class="flex justify-between items-start mb-6">
+                        <div class="flex items-center gap-4">
+                            <div class="w-12 h-12 rounded-full bg-orange-700 flex items-center justify-center font-bold text-xl text-white">R</div>
+                            <div>
+                                <h3 class="font-bold text-white">Rajit Kumar</h3>
+                                <p class="text-xs text-slate-500">4 reviews</p>
+                            </div>
+                        </div>
+                        <div class="flex text-primary text-sm"><span class="material-symbols-outlined fill-1">star</span><span class="material-symbols-outlined fill-1">star</span><span class="material-symbols-outlined fill-1">star</span><span class="material-symbols-outlined fill-1">star</span><span class="material-symbols-outlined fill-1">star</span></div>
+                    </div>
+                    <p class="text-slate-300 font-light flex-grow leading-relaxed">
+                        "I ordered cake and lunch from Australian bakery for my fiance. I had the wonderful experience with Australian bakery. I want to give special credit and gratitude to Amritpal. My whole order was prepared by AMRITPAL. He listened my order..."
+                    </p>
+                </div>
+                
+                <!-- Review 5 -->
+                 <div class="review-card">
+                    <div class="flex justify-between items-start mb-6">
+                        <div class="flex items-center gap-4">
+                            <div class="w-12 h-12 rounded-full bg-purple-700 flex items-center justify-center font-bold text-xl text-white">J</div>
+                            <div>
+                                <h3 class="font-bold text-white">Jasleen Kaur</h3>
+                                <p class="text-xs text-slate-500">7 reviews &middot; 3 photos</p>
+                            </div>
+                        </div>
+                        <div class="flex text-primary text-sm"><span class="material-symbols-outlined fill-1">star</span><span class="material-symbols-outlined fill-1">star</span><span class="material-symbols-outlined fill-1">star</span><span class="material-symbols-outlined fill-1">star</span><span class="material-symbols-outlined fill-1">star</span></div>
+                    </div>
+                    <p class="text-slate-300 font-light mb-6 flex-grow leading-relaxed">
+                        "Super nice service given by Australian bakers 💖💖just love the taste, they made it exactly the same that I told them to make...... they spoke very nicely. I will definitely recommend you to visit and have yummy yummy sweets and more ..... thank you Australian bakers for this lovely service and taste"
+                    </p>
+                </div>
+                
+                <!-- Review 6 w/ Images -->
+                 <div class="review-card">
+                    <div class="flex justify-between items-start mb-6">
+                        <div class="flex items-center gap-4">
+                            <div class="w-12 h-12 rounded-full bg-slate-800 overflow-hidden">
+                                <img src="https://ui-avatars.com/api/?name=Wanderer+Soul&background=104e38&color=fff" alt="Surbhi Piya">
+                            </div>
+                            <div>
+                                <h3 class="font-bold text-white flex items-center gap-1">Wanderer Soul <span class="material-symbols-outlined text-[14px] text-orange-500 fill-1">stars</span></h3>
+                                <p class="text-xs text-slate-500">Local Guide &middot; 443 reviews &middot; 1518 photos</p>
+                            </div>
+                        </div>
+                        <div class="flex text-primary text-sm"><span class="material-symbols-outlined fill-1">star</span><span class="material-symbols-outlined fill-1">star</span><span class="material-symbols-outlined fill-1">star</span><span class="material-symbols-outlined fill-1">star</span><span class="material-symbols-outlined fill-1">star</span></div>
+                    </div>
+                    <p class="text-slate-300 font-light mb-6 flex-grow leading-relaxed">
+                        "Australian bakery is the best bakery in town. A large variety of cakes and pasteries are available here. A lot of other tasty snacks are also available. Sitting arrangements and decoration inside are beautiful. Dine in and take away both options are available. A little bit expensive but it's worth the quality."
+                    </p>
+                    
+                    <div class="mt-auto h-48 rounded-xl overflow-hidden mt-6">
+                       <!-- We use object-cover to effectively "crop" the screenshot seamlessly to just the interior image area for aesthetics -->
+                       <img src="assets/media__1773232037251.png" class="w-full h-full object-cover object-bottom" alt="Store Interior Photo" />
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </main>
+
+    <footer class="bg-black pt-16 pb-8 border-t border-primary/20 mt-auto">
+        <div class="max-w-[90rem] mx-auto px-6 text-center text-slate-500 text-[10px] uppercase tracking-widest">
+            <p>&copy; 2024 Australian Bakery &amp; Cafe. Est. 2013.</p>
+            <div class="flex justify-center gap-6 mt-4">
+                <a href="https://www.facebook.com/bakehousegsp/" class="hover:text-primary transition">Facebook</a>
+                <a href="https://www.instagram.com/australian_bakery_gsp/" class="hover:text-primary transition">Instagram</a>
+                <a href="https://wa.me/9107837677529" class="hover:text-primary transition">WhatsApp</a>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
